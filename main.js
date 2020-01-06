@@ -160,7 +160,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container body-content pt-3 pb-4\">\n    <div class=\"row\">\n        <div class=\"col-md-9\">\n            \n            <div style=\"text-align:center\">\n                <h2>Добрый день!</h2>\n            </div>\n            <div style=\"text-align:center\">\n                <h3>Зачисление оплаты за просмотр производится в</h3>\n                <h3><span style=\"color:forestgreen\">Долларах США!</span></h3>\n            </div>\n                <br />\n                Суть заработка заключается в просмотре рекламного контента на смартфоне, планшете или  ПК.\n                <br />\n                Вам достаточно пройти простую регистрацию по ссылке <a href=\"https://globus-inter.com/ru/land/people?invite=519545\">Регистрация в ГЛОБУСЕ</a>\n                и установить из Play Маркет приложение Глобус-Мобайл на свой смартфон или планшет.\n                <br />\n                <br />\n                Так же Вы можете установить приложение для ПК.\n                Войти в систему под своим логином и паролем.\n                <br />\n                <br />\n                Деньги начинают приходить сразу без всяких вложений и смс подтверждений - <span style=\"color:brown\">ЭТО ОЧЕНЬ ВАЖНО!</span>\n        Вам будет приятно практически ни за что получать деньги.\n        <br />\n        <h3>На первом этапе деньги очень маленькие, НО ЭТО ДЕНЬГИ!</h3>\n        Мой логин <span style=\"color:forestgreen\">euroglobus</span> - Вы можете использовать его при заполнении поля \"Кто Вас пригласил?\" при регистрации!\n        <br />\n        Далее вы можете организовать свою команду!\n    \n        Создавайте свою комманду после регистрации и выплаты для Вас будут расти с ростом Вашей команды!\n    \n    </div>\n    <div class=\"col-md-3\">\n        \n        <div class=\"main-text\">\n            <h2>Сегодня</h2>\n            <span style=\"color:darkslateblue;font-size: 24px\">{{jstoday}}</span>\n        <p style=\"color:#e9ecef;font-size: 50px;\">{{time$ | async | date:'HH:mm:ss' }}</p>\n        </div>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"container body-content pt-3 pb-4\">\n    <div class=\"row\">\n        <div class=\"col-md-9\">\n            \n            <div style=\"text-align:center\">\n                <h2>Добрый день!</h2>\n            </div>\n            <div style=\"text-align:center\">\n                <h3>Зачисление оплаты за просмотр производится в</h3>\n                <h3><span style=\"color:forestgreen\">Долларах США!</span></h3>\n            </div>\n                <br />\n                Суть заработка заключается в просмотре рекламного контента на смартфоне, планшете или  ПК.\n                <br />\n                Вам достаточно пройти простую регистрацию по ссылке <a href=\"https://globus-inter.com/ru/land/people?invite=519545\">Регистрация в ГЛОБУСЕ</a>\n                и установить из Play Маркет приложение Глобус-Мобайл на свой смартфон или планшет.\n                <br />\n                <br />\n                Так же Вы можете установить приложение для ПК.\n                Войти в систему под своим логином и паролем.\n                <br />\n                <br />\n                Деньги начинают приходить сразу без всяких вложений и смс подтверждений - <span style=\"color:brown\">ЭТО ОЧЕНЬ ВАЖНО!</span>\n        Вам будет приятно практически ни за что получать деньги.\n        <br />\n        <h3>На первом этапе деньги очень маленькие, НО ЭТО ДЕНЬГИ!</h3>\n        Мой логин <span style=\"color:forestgreen\">euroglobus</span> - Вы можете использовать его при заполнении поля \"Кто Вас пригласил?\" при регистрации!\n        <br />\n        Далее вы можете организовать свою команду!\n    \n        Создавайте свою комманду после регистрации и выплаты для Вас будут расти с ростом Вашей команды!\n    \n    </div>\n    <div class=\"col-md-3\">\n        \n        <div class=\"main-text\">\n            <h2>Сегодня</h2>\n            <span style=\"color:darkslateblue\">{{jstoday}}</span>\n        </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -175,7 +175,6 @@ module.exports = "<div class=\"container body-content pt-3 pb-4\">\n    <div cla
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MainTextComponent", function() { return MainTextComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -186,17 +185,11 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-
 var MainTextComponent = /** @class */ (function () {
     function MainTextComponent() {
         this.today = new Date();
         this.months = 'января,февраля,марта,апреля,мая,июня,июля,августа,сентября,октября,ноября,декабря'.split(',');
         this.jstoday = '';
-        this.time$ = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Observable"](function (obs) {
-            setInterval(function () {
-                obs.next(new Date());
-            }, 1000);
-        });
         this.jstoday = this.today.getDate()
             + ' '
             + this.months[this.today.getMonth()]
